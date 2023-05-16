@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "ubunix"
+version = "0.0.1"
+description = ""
+authors = ["Hannes <h@nnes.dev>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+ubunix = "ubunix:main"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ruamel-yaml = "^0.17.26"
+typer = "^0.9.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+pyright = "^1.1.306"
+ruff = "^0.0.265"
+ssort = "^0.11.6"
+
+[tool.ruff]
+ignore = ["E501"]
+
+[tool.pyright]
+strict = ["*"]
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
